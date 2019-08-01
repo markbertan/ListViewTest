@@ -1,0 +1,22 @@
+﻿<Window x:Class="ListViewTest.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="GoPro Media Files Extractor" Height="427.314" Width="661.487" Loaded="Window_Loaded" Closing="Window_Closing" ResizeMode="CanMinimize">
+    <Canvas Margin="0,0,0.2,-0.2">
+        <ListView Canvas.Left="13" Canvas.Top="51" Height="294" Name="listView1" Width="632" SelectionChanged="listView1_SelectionChanged" SelectionMode="Multiple">
+            <ListView.View>
+                <GridView>
+                    <GridView.ColumnHeaderContextMenu>
+                        <ContextMenu/>
+                    </GridView.ColumnHeaderContextMenu>
+                    <GridViewColumn Header="File Name" Width="450" DisplayMemberBinding="{Binding Col1}"></GridViewColumn>
+                    <GridViewColumn Header="Last GPS Location" Width="170" DisplayMemberBinding="{Binding Col2}"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Name="addButton" Canvas.Left="13" Canvas.Top="15" Height="21" Width="69" Click="addButton_Click" IsDefault="True">Add</Button>
+        <Button Name="removeButton" Canvas.Left="571" Canvas.Top="15" Height="21" Width="69" Click="removeButton_Click">Remove</Button>
+        <Button Name="okButton" Canvas.Left="571" Canvas.Top="362" Content="OK" Height="22" Width="74" Click="okButton_Click" />
+        <Button Name="saveButton" Canvas.Left="468" Canvas.Top="362" Content="Save" Height="22" Width="74" Click="saveButton_Click" />
+    </Canvas>
+</Window>
